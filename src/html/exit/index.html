@@ -1,0 +1,16 @@
+{{header}}
+<div class="page">
+    <form action="{{domain_name_url_val}}/{{url_val}}" method="POST">
+        <label for="">Email</label>
+        <input type="email" name="user_email" value="{{user_email_val}}" required>
+        <div class="error-msg">
+            <span class="error" style="{{error_msg_visibility_val}}">
+                {{error_msg_val}}
+            </span>
+        </div>
+        <div class="content-button">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</div>
+{{footer}}

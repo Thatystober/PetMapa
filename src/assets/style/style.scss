@@ -1,0 +1,1319 @@
+$color-base: #1D1D1D;
+$color-base-50: rgba(29, 29, 29, 50%);
+$color-base-20: rgba(29, 29, 29, 20%);
+
+$white: #fff;
+$white-60: rgba(255, 255, 255, 60%);
+$black: #000;
+
+$color-primary: #9370DB;
+$color-primary-60: rgba(149, 112, 224, 60%);
+$color-primary-20: rgba(149, 112, 224, 20%);
+$color-primary-gradient: linear-gradient(90deg, rgba(147,112,219,1) 0%, rgba(191,111,242,1) 100%);
+
+$color-lost: #F45555;
+$color-found: #4FB966;
+
+$box-shadow: 0 4px 8px $black;
+
+// RESET - START
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+}
+
+footer, header, nav, section, main{
+    display: block;
+}
+
+body{
+    line-height: 1;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+blockquote, q{
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+    content: '';
+    content: none;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+input, select, p, h1, h2, h3, h4, small, span{
+    color: $white;
+}
+
+// RESET - AND
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype'),
+        url('../fonts/Roboto-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Roboto-Medium.ttf') format('truetype'),
+        url('../fonts/Roboto-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+body{
+    background-color: $color-base;
+
+    color: $white;
+    font-family: 'Roboto', sans-serif;
+}
+
+textarea{
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1700px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+
+    position: relative;
+    width: 100%;
+    
+    @media screen and (min-width: 320px) {
+        max-width: 310px;
+    }
+
+    @media screen and (min-width: 421px) {
+        max-width: 410px;
+    }
+    
+    @media screen and (min-width: 520px) {
+        max-width: 510px;
+    }
+    
+    @media screen and (min-width: 576px) {
+        max-width: 540px;
+    }
+}
+
+// a href - Start
+.content-link{
+    text-align:center;
+    margin-top: 1rem;
+
+    .link{
+        color: $color-primary;
+    }
+}
+
+// a href - End
+// Images Top - Start
+.content-img-top{
+    text-align: center;
+
+    img{
+        margin-top: 2rem;
+    }
+}
+// Images Top - End
+
+// Titles and texts - Start
+.content-titles{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+
+    text-align: center;
+}
+
+.title-two{
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.sub-title {
+    margin-bottom: 0.5rem;
+}
+// Titles and texts - End
+
+.map-home{
+    #map{
+        height: calc(100vh - 160px);font-display: swap;
+        width: 100% ;
+    }
+}
+
+.loader-map{
+    height: calc(100vh - 160px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.none{
+        display: none;
+    }
+}
+
+// Logo petmapa - Start
+.tag-img{
+    width: 175px;
+    height: 75px;
+}
+// Logo petmapa - End
+
+// PDF - Start
+.content-pdf{
+    p{
+        margin-bottom: 1rem;
+    }
+
+    .content-pdf-img{
+        text-align: center;
+
+        img{
+            width: 400px;
+            height: 300px;
+            object-fit: contain;
+
+            @media screen and (min-width: 320px) {
+                width: 250px;
+                height: 200px;
+            }
+
+            @media screen and (min-width: 421px) {
+                width: 330px;
+                height: 250px;
+            }
+
+            @media screen and (min-width: 520px) {
+                width: 400px;
+                height: 300px;
+            }
+        }
+       
+    }
+
+    .content-pdf-info{
+        padding: 0 1rem;
+
+        .pdf-name-pet {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .content-pdf-info-size-age{
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            flex-wrap: wrap;
+
+            @media screen and (min-width:320px) {
+                justify-content: flex-start;
+                gap: 0.2rem;
+            }
+
+            @media screen and (min-width: 421px) {
+                gap: 1rem;
+            }
+        }
+    }
+
+    .content-pdf-qrcode{
+        text-align: center;
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+// PDF - END
+// Cards Pets lost and Pets found - Start
+.content-cards-pets{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .card-pet{
+        background-color: $color-base;
+        box-shadow: $box-shadow;
+        padding: 1rem;
+        border-radius: 5px;
+
+        .card-pet-img{
+            margin-bottom: 1rem;
+
+            img{
+                width: 180px;
+                height: 180px;
+                object-fit: contain;
+            }
+        }
+
+        .card-pet-info{
+            h4.name-pet {
+                text-align: center;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .content-link-button {
+            padding: 0.5rem 1rem;
+            margin-top: 0.8rem;
+            border: 1px solid $color-primary;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: .5s;
+
+            .link-button {
+                color: $white;
+                text-decoration: none;
+            }
+
+            &:hover,
+            &:focus,
+            &:focus-visible{
+                background-color: $color-primary;
+            }
+        }
+    }
+    
+    p{
+        line-height: 1.5;
+    }
+
+    @media screen and (min-width: 320px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (min-width: 520px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+// Cards Pets lost and Pets found - End
+// Tag P with link - Start
+.text-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: $white-60;
+
+    a{
+        text-decoration: none;
+        color: $color-primary;
+    }
+}
+// Tap P with link - End
+.none{
+    display: none;
+}
+
+// Input - Start
+.content-input{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: relative;
+
+    &.focus{
+        label{
+            top: 4px;
+            font-size: 14px;
+        
+            color: $color-primary;
+            left: 0;
+        }
+    }
+
+    input, 
+    select,
+    textarea{
+        background: transparent;
+        border: 1px solid $white-60;
+        padding: 0.8rem;
+        border-radius: 4px;
+        margin-top: 1.5rem;
+        outline: none;
+        width: 100%;
+
+        color: $white-60;
+
+        &:focus,
+        &:focus-visible{
+            border-color: $color-primary;
+        }
+
+        &::-webkit-autofill{
+            + label{
+                top: 4px;
+                font-size: 14px;
+            
+                color: $color-primary;
+            }
+        }
+
+        &#userPassword,
+        &#userPasswordConfirm{
+            position: relative;
+            top: 0;
+            bottom: 0;
+        }
+
+        option{
+            color: $color-base;
+        }
+    }
+
+    .icon-show-password,
+    .icon-show-password-confirm,
+    
+    .icon-show-password-off,
+    .icon-show-password-confirm-off{
+        position: absolute;
+        right: 8px;
+        bottom: 11px;
+    }
+
+    .floating-label{
+        color: $white-60;
+        font-size: 14px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 30px;
+    
+        transition: .5s;
+    }
+
+    &#age{
+        @media screen and (min-width:320px) {
+            width: 50%; 
+        }
+
+        @media screen and (min-width:421px) {
+            width: 67%;
+        }
+
+        @media screen and (min-width:520px) {
+            width: 75%;
+        }
+    }
+}
+
+select.floating{
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+
+    color: var(--color-gray);
+    background-color: transparent;
+}
+
+select.floating:focus{
+    outline: none;
+    border-color: var(--color-orange);
+}
+
+// Input - End
+
+// Modal - Start
+.modal{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+
+    .content-modal{
+        background-color: $color-base;
+        margin: 15% auto;
+        padding: 20px;
+        box-shadow: $box-shadow;
+        width: 50%;
+        border-radius: 5px;
+
+        .change-modal-content{
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 1rem;
+            text-align: center;
+
+
+            form{
+                .buttons-case{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    
+                    .button-with-icon{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .content-close{
+            display: flex;
+            flex-direction: row-reverse;
+
+            span.close{
+                cursor: pointer;
+                color: red;
+                font-size: 1.5rem;
+                transition: .5s;
+
+                &:hover,
+                &:focus,
+                &:focus-visible{
+                    opacity: 0.7;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+
+    &.active{
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s;
+    }
+}
+// Modal - End
+
+// Button with icon - Start
+.button-with-icon{
+    border-radius: 4px;
+    border: 1px solid $color-primary;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+
+    &:hover,
+    &:focus,
+    &:focus-visible{
+        background-color: $color-primary;
+    }
+
+    a{
+        width: 100%;
+        text-decoration: none;
+    }
+
+    button{
+        outline: none;
+        background: rgba(0,0,0,0);
+        border: 0;
+        color: $white;
+        width: 100%;
+        height: 38px;
+        font-size: 1rem;
+        background-color: $color-primary;
+
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+// Button with icon - Start
+
+// Form Content - Start
+.content-form{
+    // height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-bottom: 2rem;
+
+    > div:not(.content-titles, .content-cards-pets, .button-with-icon, .error-msg, .content-img-not-found){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 4px;
+        box-shadow: $box-shadow;
+        background-color: $color-base;
+        margin-top: 1rem;
+
+        width: 100%;
+    }
+   
+    form{
+        width: 100%;
+    }
+
+    &.login,
+    &.register{
+        height: 75vh;
+    }
+}
+
+// Form Content - End
+// Message Error - Start
+.error-msg{
+    margin-top: 10px;
+    span.error {
+        font-size: 0.75rem;
+        color: $color-lost;
+    }
+}
+
+// Message Error - End
+
+// Height Pages - Start
+.page{
+    padding-bottom: 3.5rem;
+}
+// Height Pages - End
+
+// Home - Start
+.home-menu{
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a{
+            text-decoration: none;
+            color: $color-primary;
+        }
+    }
+}
+
+.details-case-pet-home{
+    text-align: center;
+
+    .content-details-case-img{
+        border-bottom: 2px solid $color-primary;
+
+        img{
+            height: 150px;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            box-shadow: 1px 1px 6px #e8eaed;
+
+            @media screen and (min-width: 320px) {
+                width: 130px;
+                height: 130px;
+            }
+
+            @media screen and (min-width: 421px) {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+   
+    p,
+    h1{
+        font-family: "Roboto", sans-serif;
+        color: $color-base;
+    }
+
+    h1{
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+
+    p{
+        font-weight: normal;
+        font-size: 1rem;
+    }
+    
+}
+// Home - End
+
+// Menu - Start
+.navbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .content-navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        background-color: $black;
+
+        a{
+            padding: 0.8rem 1rem;
+            text-decoration: none;
+
+            &.navbar-found{
+                &.active{
+                    padding: 0.8rem 0.5rem;
+                }
+            }
+
+            &.navbar-donation{
+                &.active{
+                    padding:0.5rem;
+                }
+            }
+
+            &.navbar-profile,
+            &.navbar-lost{
+                &.active{
+                    padding: 0.5rem 1rem;
+                }
+            }
+
+            &.active{
+                border-radius: 100%;
+                background: $color-primary-gradient;
+                position: relative;
+                bottom: 1.25rem;
+                border: 0.5rem solid #000;
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.25rem;
+
+                p{
+                    // font-size: 0.625rem;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+// Menu - End
+
+// Page Login and Register - Start
+#pageLogin,
+#pageRegisterPassword{
+    .content-form{
+        .content-input{
+            margin-bottom: 10px;
+        }
+
+        .sub-title{
+            text-align: center;
+        }
+    }
+}
+
+#pageLoginPassword{
+    .text-link{
+        a{
+            color: $white-60;
+        }
+    }
+}
+// Page Login and Register - End
+
+
+// Page Lost and Found- Start
+#pageLostPet,
+#pageFoundPet,
+#pageLostPetMap,
+#pageFoundPetMap{
+    .content-form{
+        justify-content: start;
+        
+        .options-dog-or-cat{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
+    .loader-map{
+        height: 450px
+    }
+}
+
+#pageLostPet,
+#pageFoundPet,
+#pageLostPetMap,
+#pageFoundPetMap,
+#pageLostPetModel,
+#pageFoundPetModel{
+    .sub-title{
+        color: $color-primary;
+    }
+    form{
+        .option-model,
+        .option-pet-dog-cat{
+            visibility: hidden;
+
+            &:checked{
+                & +label{
+                    img{
+                        border-color: $color-primary;
+                    }
+                }
+            }
+        }
+
+        label {
+            display: block;
+        
+            img{
+                border: 4px solid;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+#pageLostPetModel,
+#pageFoundPetModel{
+    .options-models{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5rem;
+        justify-content: center;
+
+        .option-model-dog{
+            height: 90px;
+            width: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+    
+   .content-form{
+        justify-content: start;
+
+        .content-titles{
+            .title{
+                font-size: 1.5rem;
+            }
+       }
+   }
+   
+}
+
+#pageLostPetForm,
+#pageFoundPetForm{
+    .content-form{
+        justify-content: start;
+    
+        .sub-title{
+            color: $color-primary;
+        }
+
+        .content-age{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .content-input{
+            &.content-photo-file{
+                gap: 0;
+    
+                p{
+                    font-size: 14px;
+                    margin-bottom: .5rem;
+                }
+    
+                input[type="file"] {
+                    display: none;
+                }
+            
+                .photo-pet{
+                    padding: 0.5rem 0;
+                    background-color: transparent;
+                    color: #fff;
+                    text-align: center;
+                    display: block;
+                    border: 1px solid $color-primary;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    width: 150px;
+                    margin-top: 0;
+                }
+            }
+
+            .content-label-and-message{
+                .photo-message{
+                    margin-top: 0.5rem;
+                    &.add {
+                        color: $color-found;
+                    }
+
+                    &.error-add{
+                        color: $color-lost;
+                    }
+                }
+            }   
+
+            select{
+                height: 42.59px;
+            }
+            
+        }
+    }
+}
+
+#pageLostSuggestion,
+#pageFoundSuggestion{
+    .content-form{
+        justify-content: start;
+    }
+
+    .button-with-icon{
+        width: 100%;
+    }
+    
+}
+
+#pageLostCase,
+#pageFoundCase{
+    .content-form{
+        justify-content: start;
+    }
+
+    .pdf-name-pet{
+        margin-top: 1rem;
+    }
+
+    p{
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        word-break: break-all;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .share-case{
+        margin: 2rem 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .content-clipboard{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            input{
+                background: transparent;
+                border: 1px solid #fff;
+                padding: 0.8rem;
+                border-radius: 4px;
+                outline: none;
+                color: #fff;
+                
+                height: 38px;
+            }
+
+            .button-with-icon{
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+// Page Lost and Found - End
+// Page Profile - Start
+
+#pageProfile,
+#pageProfileEdit,
+#pageProfileMyCases,
+#pageProfileCase{
+    .content-img-top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        a{
+            color: $color-primary;
+            text-decoration: none;
+        }
+    }
+}
+
+#pageProfile{
+    .content-form{
+        .content-info{
+            width: 100%;
+
+            p{
+                margin-bottom: 1rem;
+
+                span{
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .button-with-icon{
+            width: 100%;
+        }
+    }
+}
+
+// Page Profile My Cases - Start
+#pageProfileMyCases{
+    .content-cards-pets{
+        .card-pet{
+            .content-link-button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+
+                a{
+                    width: 100%;
+                    padding: 0.5rem 1rem;
+                }
+            }
+
+            &.lost {
+                border: 1px solid $color-lost;
+            }
+
+            &.found {
+                border: 1px solid $color-found;
+            }
+
+            &.returned {
+                border: 1px solid $color-primary;
+
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+
+            .card-message-found{
+                position: absolute;
+                top: 0;
+                left: 0rem;
+                background: $color-primary;
+                width: 100%;
+                border-radius: 4px 4px 0 0;
+
+                p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .not-cases{
+        margin-top: 10rem;
+    }
+     
+}
+// Page Profile My Cases - End
+
+#pageProfileCase{
+    .content-info-pet-case{
+        margin-top: 1rem;
+        // position: relative;
+        // left: 0;
+        // bottom: 0;
+
+        margin-top: 1rem;
+        line-height: 1.2;
+
+        .name-pet{
+            font-weight: 600;
+            text-align: center;
+
+            margin-bottom: 0.5rem;
+        }
+
+        p{
+            word-break: break-all;
+            line-height: 1.2;
+        }
+    }
+
+    .content-link{
+        text-align: initial;
+        
+        .link{
+            text-decoration: none;
+        }
+    }
+    .buttons-case{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .button-with-icon{
+        width: 100%;
+        
+        &:not(.edit, .download){
+            button{
+                background-color: $color-primary;
+            }
+        }
+    }
+    
+    .content-found-message{
+        text-align: center;
+
+        .found-message{
+            color: $color-found;
+            font-size: 1.2rem;
+            font-weight: 600;
+
+            margin: 1rem 0;
+        }
+    }
+
+    .form-delete{
+        width: 100%;
+        margin-top: 1rem;
+
+        button{
+            background-color: #1d1d1d;
+            box-shadow: 0 4px 8px #000;
+            border: 0;
+            color: $white;
+
+            width: 80px;
+            height: 30px;
+            border-radius: 4px;
+            
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+    }
+}
+// Page Profile - End
+
+// Page Donation - Start
+#pageDonation{
+    .donation{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    
+        .infos-donation {
+            margin-top: 4rem;
+            
+            .description-donation{
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            h3{
+                font-size: 1.2rem;
+                text-align: center;
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+    
+            p{
+                font-size: 1.2rem;
+                text-align: center;
+            }
+    
+            .button-whats{
+                border-radius: 4px;
+                border: 1px solid $color-found;
+                cursor: pointer;
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                width: 50%;
+                margin: 1rem auto;
+                transition: .5s;
+    
+                a{
+                    width: 100%;
+                    height: 38px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+    
+            .content-qrcode-donation{
+                text-align: center;
+                margin-top: 1rem;
+                .qrcode-donation{
+                    margin-bottom: 1rem;
+        
+                    width: 200px;
+                }
+            }
+            
+        }
+    }
+}
+// Page Donation - End
+
+// Page Password Email Sent - Start
+#pagePasswordEmailSent{
+    .content-form{
+        height: calc(100% - 225px);
+
+        p{
+            text-align: center;
+            color: $color-found;
+
+            font-size: 1.2rem;
+            margin: 1rem 0;
+    
+            span{
+                color: $white;
+            }
+        }
+    
+        .button-with-icon{
+            width: 100%;
+        }
+    }
+   
+}
+// Page Password Email Sent - End
+// Page Not Found - Start
+.not-found{
+    height: calc(100% - 85px);
+    display: flex;
+    justify-content: center;
+    
+    .error-msg{
+        margin-top: 1rem;
+        span.error{
+            font-size: 1.2rem;
+            color: $white;
+        }
+    } 
+
+    .content-img-not-found{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        img{
+            width: 100px;
+        }
+
+        p{
+            font-weight: 600;
+            font-size: 2rem;
+        }
+    }
+
+    button{
+        outline: none;
+        border: 0;
+        color: #fff;
+        width: 100%;
+        height: 38px;
+        font-size: 1rem;
+        background-color: #9370db;
+        cursor: pointer;
+        margin-top: 1rem;
+        border-radius: 4px;
+    }
+
+
+}
+// Page Not Found - End

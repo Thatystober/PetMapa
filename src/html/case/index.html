@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMapa - PDF</title>
+</head>
+
+<body>
+    <table width="100%" align="center" cellpadding="0" cellspacing="0" bgColor="#fff">
+        <tr align="center" bgcolor="#fff">
+            <td>&nbsp;</td>
+            <td>
+                <table width="100%" height="100px" align="center" cellpadding="0" cellspacing="0" bgColor="#fff">
+                    <tr align="center">
+                        <td>&nbsp;</td>
+                        <td>
+                            <font face="Arial" style="font-size: 35px;" color="#0000">
+                                <strong>{{search_val}}</strong>
+                            </font>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr align="center" bgcolor="#fff">
+            <td>&nbsp;</td>
+            <td>
+                <img src="{{img_cdn_val}}/{{case_photo_val}}" alt="Imagem do Pet">
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr align="center" class="">
+            <td>&nbsp;</td>
+            <td>
+                <font face="Arial" style="font-size: 25px;" color="#0000">
+                    <strong>{{case_name_val}}</strong>
+                </font>
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;</td>
+            <td>
+                <font face="Arial" style="font-size: 20px;" color="#0000">
+                    <strong>Porte:</strong> {{case_size_val}}
+                </font>
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;</td>
+            <td>
+                <font face="Arial" style="font-size: 20px;" color="#0000">
+                    <strong>Idade:</strong> {{case_age_val}} {{case_age_time_val}}
+                </font>
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;</td>
+            <td>
+                <font face="Arial" style="font-size: 20px;" color="#0000">
+                    <strong>Telefone para contato:</strong> {{case_phone_val}}
+                </font>
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;</td>
+            <td>
+                <font face="Arial" style="font-size: 20px;" color="#0000">
+                    <strong>Perdido(a) no dia:</strong> {{case_date_val}}
+                </font>
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr align="center">
+            <td>&nbsp;</td>
+            <td>
+                <font face="Arial" style="font-size: 20px;" color="#0000">
+                    <strong>Descrição:</strong> {{case_description_val}}
+                </font>
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr align="center" bgcolor="#fff">
+            <td>&nbsp;</td>
+            <td>
+                <img src="{{img_cdn}}/qr_{{case_id_val}}.png" alt="qrcode do caso">
+            </td>
+            <td>
+                <div id="map" style="width:100%;"></div>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr align="center" bgcolor="#fff">
+            <td>&nbsp;</td>
+            <td>
+                <table width="100%" height="10px" align="center" cellpadding="0" cellspacing="0" bgColor="#fff">
+                    <tr align="right">
+                        <td>&nbsp;</td>
+                        <td>
+                            <img src="{{cdn_val}}/assets/images/logo-escuro.svg" class="tag-img" alt="Logo PetMapa" width="150px">
+                        </td>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<!-- <script>
+    navigator.geolocation.getCurrentPosition(initMap);
+
+    function initMap(position) {
+    const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 17,
+    center: {
+    lat: {{case_lat_val}},
+    lng: {{case_lon_val}},
+    },
+    icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/info-i_maps.png",
+    mapTypeId: "satellite"
+    });
+
+
+    window.initMap = initMap;
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{google_api_key_val}}"></script> -->
+
+{{footer}}

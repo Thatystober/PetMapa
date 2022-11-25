@@ -1,0 +1,36 @@
+{{header}}
+
+<main id="pagePasswordReset" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+    </div>
+    <div class="content-form">
+        <div>
+            <form action="{{domain_name_url_val}}/{{url_val}}" method="POST" id="form">
+                <div class="content-input {{if_case_email_exists}}">
+                    <input name="user_email" value="{{user_email_val}}" class="floating" type="text" readonly>
+                    <label for="user_email" class="floating-label">E-mail</label>
+                </div>
+                <div class="content-input {{if_user_password}}">
+                    <input type="password" name="user_password" id="userPassword" class="floating" value="{{user_password_val}}" required>
+                    <img class="icon-show-password-off" src="{{cdn_val}}/assets/images/icon-password-show-off.svg" alt="Icone de olho">
+                    <label for="user_new_password" class="floating-label">Nova Senha</label>
+                </div>
+                <div class="content-input {{if_user_password_confirm}}">
+                    <input type="password" name="user_password_confirm"  id="userPasswordConfirm" class="floating" value="{{user_password_confirm_val}}" required>
+                    <img class="icon-show-password-off" src="{{cdn_val}}/assets/images/icon-password-show-off.svg" alt="Icone de olho">
+                    <label for="user_new_password_confirm" class="floating-label">Confirme a nova Senha</label>
+                </div>
+                <span class="error" style="{{error_msg_visibility_val}}">
+                    {{error_msg_val}}
+                </span>
+                <div class="button-with-icon">
+                    <button type="submit">Alterar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+{{menu}}
+{{footer}}

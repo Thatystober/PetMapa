@@ -1,0 +1,48 @@
+{{header}}
+<main id="pageFoundCase" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+    </div>
+    <div class="content-page-lost">
+        <div class="content-form lost">
+            <div>
+                <h3 class="title">PROCURO MEU DONO(A)</h3>
+                <div class="content-pdf">
+                    <div class="content-pdf-img">
+                        <img src="{{img_cdn_val}}/{{case_photo_val}}" alt="Imagem do Pet">
+                    </div>
+                    <div class="content-pdf-info">
+                        <p class="pdf-name-pet">{{case_name_val}}</p>
+                        <div class="content-pdf-info-size-age">
+                            <p>Porte: {{case_size_val}}</p>
+                            <p>Idade: {{case_age_val}} {{case_age_time_val}}</p>
+                        </div>
+                        <p>Telefone para contato: {{case_phone_val}}</p>
+                        <p>Perdido(a) no dia {{case_date_val}}</p>
+                        <p>Descrição: {{case_description_val}}</p>
+                    </div>
+                    <div class="content-pdf-qrcode">
+                        <img src="{{img_cdn}}/qr_{{case_id_val}}.png" alt="qrcode do caso">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-with-icon">
+            <a href="{{file_cdn_val}}/pdf_{{case_id_val}}.pdf" target="_Blank"><button type="button">Download PDF</button></a>
+        </div>
+        <div class="content-link">
+            <a href="{{domain_name_url_val}}/home/{{case_lat_val}}/{{case_lon_val}}" class="link">Ver no mapa</a>
+        </div>
+        <div class="share-case">
+            <p>Compartilhe o link nas suas redes sociais.</p>
+            <div class="content-clipboard">
+                <input type="text" value="{{domain_name_url_val}}/home/{{case_lat_val}}/{{case_lon_val}}" readonly>
+                <div class="button-with-icon">
+                    <button onclick="bundle.clipBoardShareCase(this, '{{domain_name_url_val}}', '{{case_lat_val}}', '{{case_lon_val}}')" value="Copiar">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{menu}}
+{{footer}}

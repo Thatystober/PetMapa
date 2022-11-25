@@ -1,0 +1,28 @@
+{{header}}
+
+<main class="page">
+    <div class="home-menu">
+        <div class="container">
+            <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+            {{html_login_or_logout_button}}
+        </div>
+        
+    </div>
+    
+    <div class="map-home container">
+        <div id="map" style="width:100%;" class="none"></div>
+    </div>
+    <div class="loader-map">
+        <video autoplay loop muted playsinline>
+            <source src="{{cdn_val}}/assets/images/loading-maps.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+</main>
+
+
+<script>
+    {{html_initialize_map}}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{google_api_key_val}}"></script>
+{{menu}}

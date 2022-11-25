@@ -1,0 +1,37 @@
+const contentString{{index_val}} =
+    `<div class="details-case-pet-home">
+        <div class="content-details-case-img">
+            <img src="{{img_cdn_val}}/{{case_photo_val}}" alt="Imagem do Pet">
+        </div>
+        
+        <h1>{{case_name_val}}</h1>
+        <p>{{case_status_val}}: {{case_date_val}}</p>
+        <div class="button-with-icon">            
+            <a href="https://api.whatsapp.com/send?phone=55{{case_phone_val}}8&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20do%20seu%20caso%20no%20PetMapa." target="_Blank">
+                <button type="button">
+                    <img src="{{cdn_val}}/assets/images/icon-whats-case.png" alt="">
+                    Chamar
+                </button>
+            </a>        
+        </div>
+    </div>`;
+
+const infowindow{{index_val}} = new google.maps.InfoWindow({
+    content: contentString{{index_val}},
+});
+const marker{{index_val}} = new google.maps.Marker({
+    position: {
+        lat: {{case_lat_val}},
+        lng: {{case_lon_val}},
+    },
+    map,
+    icon: "{{cdn_val}}/assets/images/{{case_icon_val}}",
+});
+
+marker{{index_val}}.addListener("click", () => {
+    infowindow{{index_val}}.open({
+        anchor: marker{{index_val}},
+        map,
+        shouldFocus: false,
+    });
+});

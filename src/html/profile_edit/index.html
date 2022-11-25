@@ -1,0 +1,49 @@
+{{header}}
+<main id="pageProfileEdit" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+        <a href="{{domain_name_url_val}}/exit">Sair</a>
+    </div>
+    <div class="content-form">
+        <div class="content-titles">
+            <h3 class="title">Editar Perfil</h3>
+        </div>
+        <div>
+            <h3 class="title">Seus dados</h3>
+            <form action="{{domain_name_url_val}}/{{user_url_val}}" method="POST" id="form">
+                <div class="content-input focus">
+                    <input type="email" name="user_email" class="floating" value="{{user_email_val}}" required readonly>
+                    <label for="user_email" class="floating-label">Email</label>
+                </div>
+                <div class="content-input focus">
+                    <input type="text" name="user_name" class="floating" value="{{user_name_val}}" required>
+                    <label for="user_name" class="floating-label">Nome</label>
+                </div>
+                <div class="content-input focus">
+                    <input type="text" name="user_last_name" class="floating" value="{{user_last_name_val}}" required>
+                    <label for="user_last_name" class="floating-label">Sobrenome</label>
+                </div>
+                <div class="content-input focus">
+                    <input type="text" name="user_phone" id="user-phone" class="floating" value="{{user_phone_val}}" required>
+                    <label for="user_phone" class="floating-label">Telefone</label>
+                </div>
+                <div class="error-msg">
+                    <span class="error" style="{{error_msg_visibility_val}}">
+                        {{error_msg_val}}
+                    </span>
+                </div>
+                <div class="content-link">
+                    <a href="{{domain_name_url_val}}/profile_password" class="link">Alterar Senha</a>
+                </div>
+                <div class="button-with-icon">
+                    <button type="submit">Salvar alterações</button>
+                </div>
+            </form>
+            <div class="content-link">
+                <a href="{{domain_name_url_val}}/profile" class="link">Voltar</a>
+            </div>
+        </div>
+    </div>
+</main>
+{{menu}}
+{{footer}}

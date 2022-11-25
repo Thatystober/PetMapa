@@ -1,0 +1,42 @@
+{{header}}
+<main id="pageRegisterPassword" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+    </div>
+    <div class="content-form register">
+        <div>
+            <h3 class="title">Configurar sua senha</h3>
+            <p class="sub-title">Digite uma senha para sua nova conta</p>
+
+            <form action="{{domain_name_url_val}}/{{user_url_val}}" method="POST" id="form">
+                <div class="content-input {{if_user_password_exists}}">
+                    <input type="password" id="userPassword" name="user_password" class="floating password" value="{{user_password_val}}" required>
+                    <img class="icon-show-password-off" src="{{cdn_val}}/assets/images/icon-password-show-off.svg" alt="Icone de olho">
+                    <label for="" class="floating-label">Senha</label>
+
+                </div>
+                <div class="content-input {{if_user_password_confirm_exists}}">
+                    <input type="password" id="userPasswordConfirm" name="user_password_confirm" class="floating password" value="{{user_password_confirm_val}}" required>
+                    <img class="icon-show-password-off" src="{{cdn_val}}/assets/images/icon-password-show-off.svg" alt="Icone de olho">
+                    <label for="" class="floating-label">Confirme sua senha</label>
+                </div>
+                <div class="error-msg">
+                    <span class="error" style="{{error_msg_visibility_val}}">
+                        {{error_msg_val}}
+                    </span>
+                </div>
+                <div class="button-with-icon">
+                    <button type="submit">
+                        Cadastrar
+                        <img src="{{cdn_val}}/assets/images/icon-next.svg" alt="">
+                    </button>
+                  
+                </div>
+                <p class="text-link">Já tem uma conta? <a href="{{domain_name_url_val}}/login" class="link">Acesse</a></p>
+            </form>
+        </div>
+        
+    </div>
+</main>
+{{menu}}
+{{footer}}

@@ -1,0 +1,43 @@
+{{header}}
+<main id="pageFoundPet" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+    </div>
+    <div class="content-page-found">
+        <div class="content-form found">
+            <div class="content-titles">
+                <h3 class="title">Você encontrou um Pet perdido?</h3>
+                <p class="sub-title">Vamos te ajudar a encontrar o(a) dono(a).</p>
+            </div>
+            <div>
+                <h3 class="title-two">Escolha qual tipo de Pet você encontrou?</h3>
+                <form action="{{domain_name_url_val}}/{{user_url_val}}" method="POST">
+                    <div class="options-dog-or-cat">
+                        <input type="radio" id="dog" name="case_type" value="dog" class="option-pet-dog-cat">
+                        <label for="dog">
+                            <img src="{{cdn_val}}/assets/images/dog.png" alt="">
+                        </label>
+                        <input type="radio" id="cat" name="case_type" value="cat" class="option-pet-dog-cat">
+                        <label for="cat">
+                            <img src="{{cdn_val}}/assets/images/cat.png" alt="">
+                        </label>
+                    </div>
+                    <div class="error-msg">
+                        <span class="error" style="{{error_msg_visibility_val}}">
+                            {{error_msg_val}}
+                        </span>
+                    </div>
+                    <div class="button-with-icon">
+                        <button type="submit">
+                            Próximo
+                            <img src="{{cdn_val}}/assets/images/icon-next.svg" alt="">
+                        </button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{{menu}}
+{{footer}}

@@ -1,0 +1,24 @@
+navigator.geolocation.getCurrentPosition(initMap);
+
+function initMap(position) {
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 17,
+        center: {
+            lat: {{browser_or_path_lat_val}}, 
+            lng: {{browser_or_path_lon_val}},
+        },
+        icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/info-i_maps.png",
+        mapTypeId: "hybrid"
+    });
+    {{html_home_cases}}
+
+    google.maps.event.addListenerOnce(map, 'idle', function(){
+        const loader = document.querySelector(".loader-map");
+        const map = document.querySelector("#map");
+        loader.classList.add("none");
+        map.classList.remove("none");
+    });
+
+    window.initMap = initMap;
+}
+

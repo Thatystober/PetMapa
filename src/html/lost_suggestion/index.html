@@ -1,0 +1,29 @@
+{{header}}
+<main id="pageLostSuggestion" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+    </div>
+    <div class="content-page-lost">
+        <div class="content-form lost">
+            <div class="content-titles">
+                <h3 class="title">Pronto! Você acabou de postar que perdiu seu Pet :(</h3>
+            </div>
+            <h3 class="title-two">O pet que você perdeu não é um desses?</h3>
+
+            <div class="content-cards-pets">
+                {{html_lost_suggestion_cases}}
+            </div>
+            <div class="button-with-icon">
+                <a href="{{domain_name_url_val}}/lost_case/{{case_id}}">
+                    <button type="button">
+                        Meu pet não está aqui
+                        <img src="{{cdn_val}}/assets/images/icon-next.svg" alt="">
+                    </button>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</main>
+{{menu}}
+{{footer}}

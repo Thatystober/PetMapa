@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwl/?lid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "LAMBDA",
+            "type": "python",
+            "request": "launch",
+            "program": "lambda_function.py",
+            "console": "integratedTerminal",
+            "env": {
+                "AWS_ACCESS_KEY_ID": "AKIAU3RZLIN7SGHMR3MI",
+                "AWS_SECRET_ACCESS_KEY": "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",
+                "AWS_DEFAULT_REGION": "sa-east-1"
+            },
+        },
+        {
+            "name": "UPDATE",
+            "type": "python",
+            "request": "launch",
+            "program": "update_lambda.py",
+            "console": "integratedTerminal",
+            "env": {
+                "AWS_ACCESS_KEY_ID": "AKIAU3RZLIN7SGHMR3MI",
+                "AWS_SECRET_ACCESS_KEY": "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",
+                "AWS_DEFAULT_REGION": "sa-east-1"
+            },
+        },
+        {
+            "name": "Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "AWS_ACCESS_KEY_ID": "AKIAU3RZLIN7SGHMR3MI",
+                "AWS_SECRET_ACCESS_KEY": "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",
+                "AWS_DEFAULT_REGION": "sa-east-1"
+            },
+        }
+    ]
+}

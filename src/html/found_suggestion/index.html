@@ -1,0 +1,29 @@
+{{header}}
+<main id="pageFoundSuggestion" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+    </div>
+    <div class="content-page-found">
+        <div class="content-form found">
+            <div class="content-titles">
+                <h3 class="title">Pronto! Você acabou de postar que encontrou um Pet! </h3>
+            </div>
+            <h3 class="title-two">O pet que você encontrou não é um desses perdidos?</h3>
+
+            <div class="content-cards-pets">
+                {{html_found_suggestion_cases}}
+            </div>
+            <div class="button-with-icon">
+                <a href="{{domain_name_url_val}}/found_case/{{case_id}}">
+                    <button type="button">
+                        O Pet não está aqui
+                        <img src="{{cdn_val}}/assets/images/icon-next.svg" alt="">
+                    </button>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</main>
+{{menu}}
+{{footer}}

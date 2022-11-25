@@ -1,0 +1,42 @@
+{{header}}
+<main id="pageProfileCase" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+        <a href="{{domain_name_url_val}}/profile_my_cases">Voltar</a>
+    </div>
+    <div class="content-form">
+        <div>
+            <div class="card-pet-img">
+                <img src="{{img_cdn_val}}/{{case_photo_val}}" alt="Imagem do Pet">
+            </div>
+            <div class="content-info-pet-case">
+                <p class="name-pet">{{case_name_val}}</p>
+                <p><span>Data:</span> {{case_date_val}}</p>
+                <p><span>Idade:</span> {{case_age_val}} {{case_age_time_val}}</p>
+                <p><span>Porte:</span> {{case_size_val}}</p>
+                <p><span>Descrição:</span> {{case_description_val}}</p>
+                {{html_check_on_the_map}}
+            </div>
+            {{html_lost_found_button_or_returned_message}}
+            <div class="buttons-case">
+                {{html_case_edit}}
+                <div class="button-with-icon download">
+                    <a href="{{file_cdn_val}}/pdf_{{case_id_val}}.pdf" target="_Blank"><button type="button">Download PDF</button></a>
+                </div>
+            </div>
+            {{html_delete_case}}
+        </div>
+    </div>
+</main>
+<div class="modal">
+    <div class="content-modal">
+        <div class="content-close">
+            <span class="close" onclick="bundle.closeButton()">
+                <img src="{{cdn_val}}/assets/images/close-circle.svg" width="24" height="24" alt="Botão de fechar o modal">
+            </span>
+        </div>
+        <div class="change-modal-content"></div>
+    </div>
+</div>
+{{menu}}
+{{footer}}

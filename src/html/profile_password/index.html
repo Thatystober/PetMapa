@@ -1,0 +1,43 @@
+{{header}}
+<main id="pageProfileChangePassword" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+    </div>
+
+    <div class="content-form">
+        <div>
+            <h3 class="title">Alterar senha</h3>
+            <p class="sub-title">Digite uma senha para sua nova conta</p>
+            <form action="{{domain_name_url_val}}/{{user_url_val}}" method="POST" id="form">
+                <div class="content-input {{if_user_old_password}}">
+                    <input type="password" name="user_old_password" id="userPassword" class="floating" value="{{user_old_password_val}}" required>
+                    <img class="icon-show-password-off" src="{{cdn_val}}/assets/images/icon-password-show-off.svg" alt="Icone de olho">
+                    <label for="user_name" class="floating-label">Senha Atual</label>
+                </div>
+                <div class="content-input {{if_user_new_password}}">
+                    <input type="password" name="user_new_password" id="userPassword" class="floating" value="{{user_new_password_val}}" required>
+                    <img class="icon-show-password-off" src="{{cdn_val}}/assets/images/icon-password-show-off.svg" alt="Icone de olho">
+                    <label for="user_new_password" class="floating-label">Nova Senha</label>
+                </div>
+                <div class="content-input {{if_user_new_password_confirm}}">
+                    <input type="password" name="user_new_password_confirm"  id="userPasswordConfirm" class="floating" value="{{user_new_password_confirm_val}}" required>
+                    <img class="icon-show-password-off" src="{{cdn_val}}/assets/images/icon-password-show-off.svg" alt="Icone de olho">
+                    <label for="user_new_password_confirm" class="floating-label">Confirme a nova Senha</label>
+                </div>
+                <div class="error-msg">
+                    <span class="error" style="{{error_msg_visibility_val}}">
+                        {{error_msg_val}}
+                    </span>
+                </div>
+                <div class="content-link">
+                    <a href="{{domain_name_url_val}}/profile_edit" class="link">Voltar</a>
+                </div>
+                <div class="button-with-icon">
+                    <button type="submit">Alterar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{{menu}}
+{{footer}}

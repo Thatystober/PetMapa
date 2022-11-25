@@ -1,0 +1,81 @@
+{{header}}
+
+<script>
+    let logoAwsParams = {
+        key: '{{case_photo_key_val}}',
+        awsAccessKeyId: '{{case_photo_AWSAccessKeyId_val}}',
+        policy: '{{case_photo_policy_val}}',
+        signature: '{{case_photo_signature_val}}',
+        s3PostUrl: '{{case_photo_s3_post_url_val}}'
+    };
+</script>
+
+<main id="pageLostPetForm" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+    </div>
+    <div class="content-form lost">
+        <div>
+            <div class="content-link">
+                <a href="{{domain_name_url_val}}/profile_case/{{case_id_val}}" class="link">Voltar</a>
+            </div>
+            <form action="{{domain_name_url_val}}/{{user_url_val}}" id="form" method="POST">
+                <div class="content-input content-photo-file">
+                    <p>Imagem do seu Pet(Atual)</p>
+                    <input oninput="bundle.sendCasePhotoImage(logoAwsParams)" id="case_photo_image" name="case_photo_image" value="{{case_photo_image_val}}" type="file" accept=".jpg, .jpeg, .png, .avif, .webp">
+                    <input class="input" name="case_photo_image_file" type="hidden" value="{{case_photo_image_file_val}}">
+                    <div class="content-label-and-message">
+                        <label for="case_photo_image" class="photo-pet">Escolher arquivo</label>
+                        <p class="photo-message"></p>
+                    </div>
+                    <input type="file" id="photoPet" name="case_photo" value="{{case_photo_val}}" accept="image/png, image/jpeg">
+                </div>
+                <div class="content-input {{if_case_date_exists}}">
+                    <input type="date" name="case_date" class="floating" value="{{case_date_val}}" required>
+                    <label for="case_date" class="floating-label">Data da perda</label>
+                </div>
+                <div class="content-age">
+                    <div class="content-input {{if_case_age_exists}}">
+                        <input type="number" name="case_age" class="floating" value="{{case_age_val}}" required>
+                        <label for="case_age" class="floating-label">Idade Aprox.</label>
+                    </div>
+                    <div class="content-input {{if_case_age_time_exists}}">
+                        <select name="case_age_time" class="floating form-select" required>
+                            <option value=""> </option>
+                            <option value="month" {{case_age_time_month_presel}}>Mes(es)</option>
+                            <option value="year" {{case_age_time_year_presel}}>Ano(s)</option>
+                        </select>
+                        <label for="case_age_time" class="floating-label">Mes/Ano</label>
+                    </div>
+                </div>
+                <div class="content-input {{if_case_size_exists}}">
+                    <select name="case_size" class="floating form-select" required>
+                        <option value=""> </option>
+                        <option value="P" {{case_size_p_presel}}>Pequeno</option>
+                        <option value="M" {{case_size_m_presel}}>Médio</option>
+                        <option value="G" {{case_size_g_presel}}>Grande</option>
+                    </select>
+                    <label for="case_size" class="floating-label">Porte</label>
+                </div>
+                <div class="content-input {{if_case_description_exists}}">
+                    <textarea name="case_description" class="floating" value="{{case_description_val}}" rows="7" maxlength="512" required> {{case_description_val}} </textarea>
+                    <label for="case_description" class="floating-label">Descrição</label>
+                </div>
+                <div class="error-msg">
+                    <span class="error" style="{{error_msg_visibility_val}}">
+                        {{error_msg_val}}
+                    </span>
+                </div>
+                <div class="button-with-icon">
+                    <button type="submit">
+                        Salvar
+                        <img src="{{cdn_val}}/assets/images/icon-next.svg" alt="">
+                    </button>
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+{{menu}}
+{{footer}}

@@ -1,0 +1,29 @@
+{{header}}
+<main id="pageProfile" class="container page">
+    <div class="content-img-top">
+        <img src="{{cdn_val}}/assets/images/logo.svg" class="tag-img" alt="Logo PetMapa">
+        <a href="{{domain_name_url_val}}/exit">Sair</a>
+    </div>
+    <div class="content-form">
+        <div class="content-titles">
+            <h3 class="title">Bem-vindo(a), {{user_name_val}}</h3>
+        </div>
+        <div>
+            <h3 class="title-two">Seus dados</h3>
+            <div class="content-info">
+                <p><span>E-mail:</span> {{user_email_val}}</p>
+                <p><span>Nome:</span> {{user_name_val}}</p>
+                <p><span>Sobrenome:</span> {{user_last_name_val}}</p>
+                <p><span>Telefone:</span> {{user_phone_val}}</p>
+            </div>
+            <div class="button-with-icon">
+                <a href="{{domain_name_url_val}}/profile_edit"><button type="button">Editar</button></a>
+            </div>
+            <div class="content-link">
+                <a href="{{domain_name_url_val}}/profile_my_cases" class="link">Meus casos</a>
+            </div>
+        </div>
+    </div>
+</main>
+{{menu}}
+{{footer}}

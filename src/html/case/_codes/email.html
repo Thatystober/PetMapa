@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMapa - {{email_title_message}}</title>
+</head>
+
+<body>
+    <table width="600px" align="center" cellpadding="0" cellspacing="0" bgColor="#1D1D1D">
+        <tr align="center" bgcolor="#1D1D1D">
+            <td>&nbsp;</td>
+            <td>
+                <img src="{{cdn_val}}/assets/images/logo.svg" alt="Logo PetMapa">
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr align="center" bgcolor="#1D1D1D">
+            <td>&nbsp;</td>
+            <td>
+                <table width="600px" height="100px" align="center" cellpadding="0" cellspacing="0" bgColor="#1D1D1D">
+                    <tr align="center">
+                        <td>&nbsp;</td>
+                        <td>
+                            <font face="Arial" style="font-size: 24px;" color="#fff">
+                                Olá, {{user_name_val}}!
+                            </font>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr align="center" bgcolor="#1D1D1D">
+            <td>&nbsp;</td>
+            <td>
+                <table width="600px" height="80px" align="center" cellpadding="0" cellspacing="0" bgColor="#1D1D1D">
+                    <tr align="center">
+                        <td>&nbsp;</td>
+                        <td>
+                            <font face="Arial" style="font-size: 16px;" color="#fff">
+                                É possível que nós tenhamos encontrado o(a) dono(a) para o seu Pet.
+                            </font>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">&nbsp;</td>
+        </tr>
+        {{html_email_suggestion_item}}
+        <tr>
+            <td colspan="3">&nbsp;</td>
+        </tr>
+    </table>
+</body>
+
+</html>
